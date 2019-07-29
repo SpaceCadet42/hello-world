@@ -1,183 +1,186 @@
-red = ["11","12", "14","15","16","18","62","63"]
+# list all cco regions:
+# Red Team, Green Team, Orange Team and Blue Team
+# returns team members and corresponding extensions
 
-blue = ["17","43","44","49","65","66","82","84","89"]
+red = ["11", "12", "14", "15", "16", "18", "62", "63"]
 
-orange = ["32","52","53","54","58","59","71","72","78"]
+blue = ["17", "43", "44", "49", "65", "66", "82", "84", "89"]
 
-green = ["21", "22","23","33","34","39","55","56","91"]
+orange = ["32", "52", "53", "54", "58", "59", "71", "72", "78"]
 
- 
-
-print("")
-
-print("::::::::::::::::::::::::::::")
-
-print(": ULTIMATE CCO TEAM FINDER :")
-
-print("::::::::::::::::::::::::::::")
+green = ["21", "22", "23", "33", "34", "39", "55", "56", "91"]
 
 print("")
 
-cco = input("   Please Enter CCO:")
+print("         ::::::::::::::::::::::::::::")
 
- 
+print("         : ULTIMATE CCO TEAM FINDER :")
 
-if cco in red:
+print("         ::::::::::::::::::::::::::::")
+
+print("")
+
+
+turnover = True
+
+while turnover == True:
+    cco = input("  >>> Please Enter CCO:")
+    if cco in red:
+        print("")
+
+        print("RED TEAM")
+
+        print("")
+
+        print("Members:")
+
+        print("")
+
+        print("Andre Camacho___________1916068")
+
+        print("")
+
+        print("Tomas Ribeiro___________1916101")
+
+        print("")
+
+        print("Jeane Oliveira__________1916630")
+
+        print("")
+
+        print("Liliana Silva___________1915218")
+
+        print("")
+
+        print("Pedro Nascimento________1916393")
+
+        print("")
+
+        print("Julmira Banjaque________1916205")
+
+        print("")
+
+    if cco in blue:
+        print("")
+
+        print("BLUE TEAM")
+
+        print("")
+
+        print("Members:")
+
+        print("")
+
+        print("Ana Lopes________________1916734")
+
+        print("")
+
+        print("Antonio C._______________1916173")
+
+        print("")
+
+        print("Carlos A.________________1916322")
+
+        print("")
+
+        print("Maria D._________________XXXXXXX")
+
+        print("")
+
+        print("Felismina X._____________1916005")
+
+        print("")
+
+        print("Filipa L.________________1916293")
+
+        print("")
+
+        print("Sonia D._________________1915204")
+
+        print("")
+
+    if cco in orange:
+        print("")
+
+        print("ORANGE TEAM")
+
+        print("")
+
+        print("Members:")
+
+        print("")
+
+        print("Esmeralda M.______________1916347")
+
+        print("")
+
+        print("Fatima B._________________1916036")
+
+        print("")
+
+        print("Pedro C.__________________1916740")
+
+        print("")
+
+        print("Emanuel M.________________XXXXXXX")
+
+        print("")
+
+        print("Ana S. M._________________1916620")
+
+        print("")
+
+        print("Marta R.__________________1915213")
+
+        print("")
+
+        print("Natalia B.________________1916553")
+
+        print("")
+
+    if cco in green:
+        print("")
+
+        print("GREEN TEAM")
+
+        print("")
+
+        print("Members:")
+
+        print("")
+
+        print("Cheila C._________________1916044")
+
+        print("")
+
+        print("Claudia C.________________1916214")
+
+        print("")
+
+        print("David M.__________________1916317")
+
+        print("")
+
+        print("Susana M._________________1916008")
+
+        print("")
+
+        print("Carla S.__________________1915207")
+
+        print("")
+
+        print("Joao G.___________________1915210")
+
+        print("")
+
+        print("Tania P.__________________1916038")
+
+        print("")
+
+    dummy = input("press any key")
 
     print("")
-
-    print("RED TEAM")
-
+    print(":::::::::::::::::::::")
     print("")
 
-    print("Members:")
-
-    print("")
-
-    print("André Camacho___________1916068")
-
-    print("")
-
-    print("Tomás Ribeiro___________1016101")
-
-    print("")
-
-    print("Jeane Oliveira__________1016630")
-
-    print("")
-
-    print("Liliana Silva___________1015218")
-
-    print("")
-
-    print("Pedro Nascimento________1016393")
-
-    print("")
-
-    print("Julmira Banjaque________1016205")
-
-    print("")
-
- 
-
-if cco in blue:
-
-    print("")
-
-    print("BLUE TEAM")
-
-    print("")
-
-    print("Members:")
-
-    print("")
-
-    print("Ana Lopes___________1916734")
-
-    print("")
-
-    print("António C.___________1016173")
-
-    print("")
-
-    print("Carlos A.__________1016322")
-
-    print("")
-
-    print("Maria D.___________XXXXXXX")
-
-    print("")
-
-    print("Felismina X.________1016005")
-
-    print("")
-
-    print("Filipa L.________1016293")
-
-    print("")   
-
-    print("Sónia D.________1015204")
-
-    print("") 
-
-if cco in orange:
-
-    print("")
-
-    print("ORANGE TEAM")
-
-    print("")
-
-    print("Members:")
-
-    print("")
-
-    print("Esmeralda M.___________1916347")
-
-    print("")
-
-    print("Fátima B.___________1916036")
-
-    print("")
-
-    print("Pedro C.__________1916740")
-
-    print("")
-
-    print("Emanuel M.___________XXXXXXX")
-
-    print("")
-
-    print("Ana S. M.________1916620")
-
-    print("")
-
-    print("Marta R.________1915213")
-
-    print("")
-
-    print("Natália B.________1916553")
-
-    print("")      
-
- 
-
-if cco in green:
-
-    print("")
-
-    print("GREEN TEAM")
-
-    print("")
-
-    print("Members:")
-
-    print("")
-
-    print("Cheila C.___________1916044")
-
-    print("")
-
-    print("Cláudia C.___________1916214")
-
-    print("")
-
-    print("David M.__________1916317")
-
-    print("")
-
-    print("Susana M.___________1916008")
-
-    print("")
-
-    print("Carla S.________1915207")
-
-    print("")
-
-    print("João G.________1915210")
-
-    print("")
-
-    print("Tânia P.________1916038")
-
-    print("")
+# program end
