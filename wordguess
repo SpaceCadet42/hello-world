@@ -1,0 +1,113 @@
+#### NOTE: running on Linux
+import os
+import random 
+import time
+
+wordpool = ["acres","adult","advice","arrangement","attempt","August","Autumn","border","breeze","brick","calm","canal","Casey","cast","chose","claws","coach","constantly","contrast","cookies","customs","damage","Danny","deeply","depth","discussion","doll","donkey","Egypt","Ellen","essential","exchange","exist","explanation","facing","film","finest","fireplace","floating","folks","fort","garage","grabbed","grandmother","habit","happily","happy","heading","hunter","Illinois","image","independent","instant","January","kids","label","Lee","lungs","manufacturing","Martin","mathematics","melted","memory","mill","mission","monkey","Mount","mysterious","neighborhood","Norway","nuts","occasionally","official","ourselves","palace","Pennsylvania","Philadelphia","plates","poetry","policeman","positive","possibly","practical","pride","promised","recall","relationship","remarkable","require","rhyme","rocky","rubbed","rush","sale","satellites","satisfied","scared","selection","shake","shaking","shallow","shout","silly","simplest","slight","slip","slope","soap","solar","species","spin","stiff","swung","tales","thumb","tobacco","toy","trap","treated","tune","university","vapor","vessels","wealth","wolf","zoo","penis","Portugal","hipster","dude","prick","dick","puke","Lisbon","France","level","bard","dragon","pencil","ruler","emperor","power","field","elected","Trump","game","tower","truth","rock","band","race","sold","slayer","fortunate","fearful","select","shook","sliver","hopeless","rythmic","sickness","testicle","foreign","inside","weather","summer","struck","ceiling","dexterous","portable","cinema","cat", "urban", "garbage", "hospital", "clinical", "roadie","animal","customer", "client", "service", "anatomy", "hurt", "gold", "asphalt", "cigarette", "soccer", "basketball", "basket", "coffee", "sofa", "keyboard", "circuit", "electronic","clockwork", "electricity", "duty", "Donald", "cartoon","February", "March", "April", "May", "December", "November", "September", "October", "snitch", "mafia", "ghost", "metal", "darkness", "corpse", "decay", "rowdy", "prison", "neon", "express", "pornography", "shark", "scoff", "scorn", "vibrator", "dildo","drunk","cocaine","heroine","fork","salesman","dork", "nerd", "sworn", "sword", "idiot", "stupid", "derelict", "spaceship", "universe", "cadet", "army", "theatre", "banana", "pineapple", "lasagna", "sugar", "cheap", "cheesy", "lovey", "sweet", "letter", "advice", "relationship", "corporate", "pink", "german", "polish", "russian","colt", "building", "furniture", "exam","vacation","fantastic","chemical", "sleazy", "magnetic","gorgeous", "jellyfish", "flute", "scarf", "doctor", "brother", "sibling", "sleepy", "frozen", "freezing" ]
+
+
+def date():
+  cur_time = time.time()
+  time_struct = time.localtime(cur_time)
+  print("\n",time.asctime(time_struct))
+
+def thankyou():
+  cr.seek(0)
+  print(tp.read())
+
+def readme():
+  cr.seek(0)
+  print(rm.read())
+
+def copyright():
+  cr.seek(0)
+  print("")
+  print(cr.read())
+
+def debug():
+ 
+  #####DEBUG BLOCK BEGIN
+  print("                         ::debug block")
+  print("                         Word: ",word)
+  print("                         Word length: ",wordl)
+  print("                         wordl var type:",type(wordl))
+  print("                         Pop Max: ",popmax)
+  print("                         Last Letter: ",word[popmax])
+  print("                         Shown letters:" ,show)
+  print("                         Missed Letters: ",wordmiss)
+  ###DEBUG BLOCK END
+
+
+##with open("copyright.txt", mode = "a") as f:
+##  f.write("\nTest Append")
+
+
+
+#VARIABLES BLOCK
+word = random.choice(wordpool)
+wordl = len(word)
+wordmiss = wordl//2 - 1
+show = wordl - wordmiss
+wshow = list()
+x = 0
+guess = str
+letterpop = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
+popmax = len(word) - 1
+cr = open("copyright.txt")
+rm = open("readme.txt")
+tp = open("thankyou.txt")
+
+
+def shuffle():
+  x = 0
+  for i in range(wordl):
+    letterpop[x] = word[x] 
+    x = x + 1
+
+  x = 0  
+  y = random.randint(0,wordl)
+  for i in range(wordmiss):
+    y = random.randint(0,wordl-1)
+    while letterpop[y] == "_":     
+      y = random.randint(0,wordl-1)
+    letterpop[y] = "_"
+  for i in range(wordl):   
+    wshow.append(letterpop[x])
+    x = x + 1    
+  print("Word: ",*wshow, "\n")
+
+def reshuffle():
+  word = random.choice(wordpool)
+  wordl = len(word)
+  wordmiss = wordl//2 - 1
+  show = wordl - wordmiss
+  letterpop = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
+  popmax = len(word) - 1
+  wshow = list()
+
+def guess():
+  tick = False
+
+  while tick == False:
+    guess = input("Your Guess: ")
+    if guess == word:
+      print("\nCorrect!")
+      input("\nPress Any Key")
+      os.system("clear")
+      tick = True
+    if guess != word:
+      print("\n Wrong! Please try again.\n")  
+
+#########   PROGRAM BLOCK
+date()
+copyright()
+print("Current word pool: ",len(wordpool),)
+
+#readme()
+input("                        Press Any Key")
+os.system("clear")   
+shuffle()
+debug()
+guess()
+
+thankyou()
